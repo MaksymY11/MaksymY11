@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix Rain — Seamless Loop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="rain"></canvas>
+  <canvas id="name"></canvas>
+  <script>
+    // ============================================================
+    //  CONFIG
+    // ============================================================
+    const DISPLAY_NAME = 'Maksym Yelisyeyev';
+    const FONT_SIZE = 14;
+    const NAME_FONT_SIZE = 100;
+    const COLOR = '#00FF41';
+    const LOOP_SECONDS = 12;          // GIF loop duration — record exactly this long
+    // ============================================================
+
+    const rainCanvas = document.getElementById('rain');
+    const rainCtx = rainCanvas.getContext('2d');
+    const nameCanvas = document.getElementById('name');
+    const nameCtx = nameCanvas.getContext('2d');
+
+    const CHARS = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    let W, H, columns, streams;
+
+    // Stream = a column cursor that "types" characters one row at a time.
+    // Characters left behind fade out over `trailLength` rows.
+    // Cycles perfectly over LOOP_SECONDS.
+    class Stream {
+      constructor(x) {
+        this.x = x;
+        this.trailLength = 12 + Math.floor(Math.random() * 16); // how many rows stay visible behind cursor
+        this.offset = Math.random(); // random start position in cycle
+        // Total rows = just enough to cover the screen + trail + small gap
+        this.totalRows = Math.ceil(H / FONT_SIZE) + this.trailLength + 5;
+        // Pre-generate a character for every possible row so it's deterministic
+        this.rowChars = [];
+        for (let r = 0; r < this.totalRows; r++) {
+          this.rowChars.push(CHARS[Math.floor(Math.random() * CHARS.length)]);
+        }
+        // Pre-bake occasional character swaps for flicker (cyclical)
+        this.flickerChars = [];
+        const totalFrames = Math.round(LOOP_SECONDS * 60);
+        for (let r = 0; r < this.totalRows; r++) {
+          // Each row has a small set of frames where it shows a different char
+          const swaps = {};
+          const numSwaps = Math.floor(Math.random() * 3); // 0-2 flickers per row per cycle
+          for (let s = 0; s < numSwaps; s++) {
+            const frame = Math.floor(Math.random() * totalFrames);
+            swaps[frame] = CHARS[Math.floor(Math.random() * CHARS.length)];
+          }
+          this.flickerChars.push(swaps);
+        }
+      }
+
+      // Collect visible characters into the shared batch arrays instead of drawing individually
+      collect(progress, frameInLoop, batches) {
+        const p = (progress + this.offset) % 1;
+        const cursorRow = Math.floor(p * this.totalRows);
+        const screenRows = Math.ceil(H / FONT_SIZE);
+
+        for (let i = 0; i <= this.trailLength; i++) {
+          const row = cursorRow - i;
+          if (row < 0) continue;
+          const py = (row < screenRows) ? row * FONT_SIZE : -999;
+          if (py < -FONT_SIZE || py > H) continue;
+
+          const charRow = row % this.totalRows;
+          let ch = this.rowChars[charRow];
+          if (this.flickerChars[charRow] && this.flickerChars[charRow][frameInLoop]) {
+            ch = this.flickerChars[charRow][frameInLoop];
+          }
+
+          // Bucket into ~10 alpha levels to minimize fillStyle changes
+          let bucket;
+          if (i === 0) bucket = 10;       // white head
+          else if (i === 1) bucket = 9;   // bright green
+          else {
+            const alpha = Math.max(0, 1 - i / this.trailLength);
+            bucket = Math.round(alpha * 8); // buckets 0-8
+            if (bucket <= 0) continue;      // invisible, skip
+          }
+
+          if (!batches[bucket]) batches[bucket] = [];
+          batches[bucket].push(ch, this.x, py);
+        }
+      }
+    }
+
+    function init() {
+      W = rainCanvas.width = nameCanvas.width = window.innerWidth;
+      H = rainCanvas.height = nameCanvas.height = window.innerHeight;
+      columns = Math.floor(W / FONT_SIZE);
+
+      streams = [];
+      for (let i = 0; i < columns; i++) {
+        const x = i * FONT_SIZE;
+        streams.push(new Stream(x));
+        // Most columns get a second stream, some get a third — keeps screen full
+        if (Math.random() < 0.6) {
+          streams.push(new Stream(x));
+        }
+        if (Math.random() < 0.2) {
+          streams.push(new Stream(x));
+        }
+      }
+    }
+
+    let startTime = null;
+
+    function draw(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsed = (timestamp - startTime) / 1000;
+
+      const progress = (elapsed % LOOP_SECONDS) / LOOP_SECONDS;
+      const totalFrames = Math.round(LOOP_SECONDS * 60);
+      const frameInLoop = Math.round(progress * totalFrames) % totalFrames;
+
+      // --- Rain layer (full clear = deterministic, no trail artifacts) ---
+      rainCtx.fillStyle = '#000000';
+      rainCtx.fillRect(0, 0, W, H);
+
+      rainCtx.font = FONT_SIZE + 'px monospace';
+
+      // Batch all characters by alpha bucket, then draw each bucket in one fillStyle
+      const batches = {};
+      for (const stream of streams) {
+        stream.collect(progress, frameInLoop, batches);
+      }
+
+      // Draw buckets — one fillStyle change per bucket instead of per character
+      const bucketColors = {
+        10: '#FFFFFF',
+        9: COLOR,
+        8: 'rgba(0,255,65,1.00)',
+        7: 'rgba(0,255,65,0.88)',
+        6: 'rgba(0,255,65,0.75)',
+        5: 'rgba(0,255,65,0.63)',
+        4: 'rgba(0,255,65,0.50)',
+        3: 'rgba(0,255,65,0.38)',
+        2: 'rgba(0,255,65,0.25)',
+        1: 'rgba(0,255,65,0.13)',
+      };
+      for (const bucket in batches) {
+        rainCtx.fillStyle = bucketColors[bucket];
+        const arr = batches[bucket];
+        for (let j = 0; j < arr.length; j += 3) {
+          rainCtx.fillText(arr[j], arr[j + 1], arr[j + 2]);
+        }
+      }
+
+      // --- Name layer (always visible with full glow) ---
+      nameCtx.clearRect(0, 0, W, H);
+
+      const centerX = W / 2;
+      const centerY = H / 2;
+
+      nameCtx.font = `bold ${NAME_FONT_SIZE}px monospace`;
+      nameCtx.textAlign = 'center';
+      nameCtx.textBaseline = 'middle';
+
+      // Black backing for contrast
+      nameCtx.lineWidth = 14;
+      nameCtx.strokeStyle = 'rgba(0, 0, 0, 0.95)';
+      nameCtx.strokeText(DISPLAY_NAME, centerX, centerY);
+
+      // Glow layer 1 — main green glow
+      nameCtx.shadowColor = COLOR;
+      nameCtx.shadowBlur = 30;
+      nameCtx.fillStyle = COLOR;
+      nameCtx.fillText(DISPLAY_NAME, centerX, centerY);
+
+      // Glow layer 2 — wider, softer glow
+      nameCtx.shadowBlur = 60;
+      nameCtx.fillStyle = 'rgba(0,255,65,0.3)';
+      nameCtx.fillText(DISPLAY_NAME, centerX, centerY);
+
+      // Glow layer 3 — extra bloom
+      nameCtx.shadowBlur = 90;
+      nameCtx.fillStyle = 'rgba(0,255,65,0.15)';
+      nameCtx.fillText(DISPLAY_NAME, centerX, centerY);
+
+      nameCtx.shadowBlur = 0;
+
+      // Bright white core text
+      nameCtx.fillStyle = 'rgba(255,255,255,0.9)';
+      nameCtx.fillText(DISPLAY_NAME, centerX, centerY);
+
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', () => {
+      init();
+      startTime = null;
+    });
+    init();
+    requestAnimationFrame(draw);
+  </script>
+</body>
+
+</html>
