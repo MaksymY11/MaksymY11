@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="60">
+  <defs>
+    <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+    </filter>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+    </filter>
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+    </filter>
+  </defs>
+  <rect width="600" height="60" rx="6" fill="#000000"/>
+  <!-- Line 1 -->
+  <text x="20" y="24" fill="rgba(0,255,65,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">Computer Science Student at San Diego State University.</text>
+  <text x="20" y="24" fill="rgba(0,255,65,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">Computer Science Student at San Diego State University.</text>
+  <text x="20" y="24" fill="#00FF41" font-family="monospace" font-size="14" filter="url(#glow3)">Computer Science Student at San Diego State University.</text>
+  <text x="20" y="24" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">Computer Science Student at San Diego State University.</text>
+  <!-- Line 2 -->
+  <text x="20" y="46" fill="rgba(0,255,65,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">Building full-stack apps, games, and ML pipelines.</text>
+  <text x="20" y="46" fill="rgba(0,255,65,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">Building full-stack apps, games, and ML pipelines.</text>
+  <text x="20" y="46" fill="#00FF41" font-family="monospace" font-size="14" filter="url(#glow3)">Building full-stack apps, games, and ML pipelines.</text>
+  <text x="20" y="46" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">Building full-stack apps, games, and ML pipelines.</text>
+</svg>
