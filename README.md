@@ -33,4 +33,4 @@
 [![Malicious URLs ML](https://img.shields.io/badge/Malicious_URLs_ML-000000?style=for-the-badge&logo=scikitlearn&logoColor=00FF41)](https://github.com/MaksymY11/Malicious-URLs-ML-Project)
 [![Charge! PVP Jousting](https://img.shields.io/badge/Charge!_PVP_Jousting-000000?style=for-the-badge&logo=unity&logoColor=00FF41)](https://github.com/MaksymY11/Charge-PVP-Jousting-Game)
 [![FarkleFrenzy](https://img.shields.io/badge/FarkleFrenzy-000000?style=for-the-badge&logo=unity&logoColor=00FF41)](https://github.com/MaksymY11/FarkleFrenzy)
-[![SpaceRock](https://img.shields.io/badge/FarkleFrenzy-000000?style=for-the-badge&logo=unity&logoColor=00FF41)](https://github.com/MaksymY11/SpaceRock)
+[![SpaceRock](https://img.shields.io/badge/SpaceRock-000000?style=for-the-badge&logo=unity&logoColor=00FF41)](https://github.com/MaksymY11/SpaceRock)
