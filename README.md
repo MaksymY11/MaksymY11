@@ -13,6 +13,7 @@
 ![Java](https://img.shields.io/badge/Java-000000?style=for-the-badge&logo=openjdk&logoColor=00FF41)
 ![SQL](https://img.shields.io/badge/SQL-000000?style=for-the-badge&logo=postgresql&logoColor=00FF41)
 ![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=00FF41)
+![HLSL](https://img.shields.io/badge/HLSL-000000?style=for-the-badge&logo=unity&logoColor=00FF41)
 
 ![Technologies](./heading-technologies.svg)
 
@@ -25,9 +26,14 @@
 ![scikit--learn](https://img.shields.io/badge/scikit--learn-000000?style=for-the-badge&logo=scikitlearn&logoColor=00FF41)
 ![Pandas](https://img.shields.io/badge/Pandas-000000?style=for-the-badge&logo=pandas&logoColor=00FF41)
 ![Netcode](https://img.shields.io/badge/Netcode_for_GameObjects-000000?style=for-the-badge&logo=unity&logoColor=00FF41)
+![Streamlit](https://img.shields.io/badge/Streamlit-000000?style=for-the-badge&logo=streamlit&logoColor=00FF41)
+![Anthropic](https://img.shields.io/badge/Anthropic_SDK-000000?style=for-the-badge&logo=anthropic&logoColor=00FF41)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-000000?style=for-the-badge&logo=chroma&logoColor=00FF41)
+![NumPy](https://img.shields.io/badge/NumPy-000000?style=for-the-badge&logo=numpy&logoColor=00FF41)
 
 ![Projects](./heading-projects.svg)
 
+[![VibeBuddy-AI](https://img.shields.io/badge/VibeBuddy_AI-000000?style=for-the-badge&logo=streamlit&logoColor=00FF41)](https://github.com/MaksymY11/VibeBuddy-AI)
 [![Mates App](https://img.shields.io/badge/Mates_App-000000?style=for-the-badge&logo=flutter&logoColor=00FF41)](https://github.com/MaksymY11/Mates_app)
 [![Mates Backend](https://img.shields.io/badge/Mates_Backend-000000?style=for-the-badge&logo=fastapi&logoColor=00FF41)](https://github.com/MaksymY11/mates_backend)
 [![Malicious URLs ML](https://img.shields.io/badge/Malicious_URLs_ML-000000?style=for-the-badge&logo=scikitlearn&logoColor=00FF41)](https://github.com/MaksymY11/Malicious-URLs-ML-Project)
