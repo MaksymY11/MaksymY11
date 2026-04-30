@@ -33,8 +33,8 @@
 
 ![Projects](./heading-projects.svg)
 
-![Mates](badges/mates.svg) ![VibeBuddy-AI](badges/vibebuddy-card.svg)
+[![Mates](badges/mates.svg)](https://github.com/MaksymY11/mates_backend) [![VibeBuddy-AI](badges/vibebuddy-card.svg)](https://github.com/MaksymY11/VibeBuddy-AI)
 
-![Malicious_URL_Classifier](badges/malicious_urls.svg) ![Charge!](badges/charge.svg)
+[![Malicious_URL_Classifier](badges/malicious_urls.svg)](https://github.com/MaksymY11/Malicious-URLs-ML-Project) [![Charge!](badges/charge.svg)](https://github.com/MaksymY11/Charge-PVP-Jousting-Game)
 
-![SpaceRock](badges/spacerock.svg) ![FarkleFrenzy](badges/farkle.svg)
+[![SpaceRock](badges/spacerock.svg)](https://github.com/MaksymY11/Malicious-URLs-ML-Project) [![FarkleFrenzy](badges/farkle.svg)](https://github.com/MaksymY11/FarkleFrenzy)
