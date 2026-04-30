@@ -33,10 +33,8 @@
 
 ![Projects](./heading-projects.svg)
 
-[![VibeBuddy-AI](https://img.shields.io/badge/VibeBuddy_AI-000000?style=for-the-badge&logo=streamlit&logoColor=00FF41)](https://github.com/MaksymY11/VibeBuddy-AI)
-[![Mates App](https://img.shields.io/badge/Mates_App-000000?style=for-the-badge&logo=flutter&logoColor=00FF41)](https://github.com/MaksymY11/Mates_app)
-[![Mates Backend](https://img.shields.io/badge/Mates_Backend-000000?style=for-the-badge&logo=fastapi&logoColor=00FF41)](https://github.com/MaksymY11/mates_backend)
-[![Malicious URLs ML](https://img.shields.io/badge/Malicious_URLs_ML-000000?style=for-the-badge&logo=scikitlearn&logoColor=00FF41)](https://github.com/MaksymY11/Malicious-URLs-ML-Project)
-[![Charge! PVP Jousting](https://img.shields.io/badge/Charge!_PVP_Jousting-000000?style=for-the-badge&logo=unity&logoColor=00FF41)](https://github.com/MaksymY11/Charge-PVP-Jousting-Game)
-[![FarkleFrenzy](https://img.shields.io/badge/FarkleFrenzy-000000?style=for-the-badge&logo=unity&logoColor=00FF41)](https://github.com/MaksymY11/FarkleFrenzy)
-[![SpaceRock](https://img.shields.io/badge/SpaceRock-000000?style=for-the-badge&logo=unity&logoColor=00FF41)](https://github.com/MaksymY11/SpaceRock)
+![Mates](badges/mates.svg) ![VibeBuddy-AI](badges/vibebuddy-card.svg)
+
+![Malicious_URL_Classifier](badges/malicious_urls.svg) ![Charge!](badges/charge.svg)
+
+![SpaceRock](badges/spacerock.svg) ![FarkleFrenzy](badges/farkle.svg)
