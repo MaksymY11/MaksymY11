@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="425" height="175">
+  <defs>
+    <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+    </filter>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+    </filter>
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+    </filter>
+  </defs>
+
+  <!-- Top border - bright glow -->
+  <text xml:space="preserve" x="12" y="22" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">┌─ Malicious URL Classifier ───────────────────────┐</text>
+  <text xml:space="preserve" x="12" y="22" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">┌─ Malicious URL Classifier ───────────────────────┐</text>
+  <text xml:space="preserve" x="12" y="22" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">┌─ Malicious URL Classifier ───────────────────────┐</text>
+  <text xml:space="preserve" x="12" y="22" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">┌─ Malicious URL Classifier ───────────────────────┐</text>
+
+  <!-- Line 1: command - dim green -->
+  <text xml:space="preserve" x="12" y="42" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="12" y="42" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="12" y="42" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="12" y="42" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <text xml:space="preserve" x="20.4" y="42" fill="rgba(255,191,0,0.08)" font-family="monospace" font-size="14" filter="url(#glow1)"> $ cat README</text>
+  <text xml:space="preserve" x="20.4" y="42" fill="rgba(220,165,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow3)"> $ cat README</text>
+  <text xml:space="preserve" x="20.4" y="42" fill="rgba(200,150,0,0.85)" font-family="monospace" font-size="14"> $ cat README</text>
+
+  <text xml:space="preserve" x="404.55" y="42" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="404.55" y="42" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="404.55" y="42" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="404.55" y="42" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <!-- Line 2: description - dim green -->
+  <text xml:space="preserve" x="12" y="62" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="12" y="62" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="12" y="62" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="12" y="62" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <text xml:space="preserve" x="20.4" y="62" fill="rgba(255,191,0,0.08)" font-family="monospace" font-size="14" filter="url(#glow1)"> > ML pipeline: malicious URL classification</text>
+  <text xml:space="preserve" x="20.4" y="62" fill="rgba(220,165,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow3)"> > ML pipeline: malicious URL classification</text>
+  <text xml:space="preserve" x="20.4" y="62" fill="rgba(200,150,0,0.85)" font-family="monospace" font-size="14"> > ML pipeline: malicious URL classification</text>
+
+  <text xml:space="preserve" x="404.55" y="62" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="404.55" y="62" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="404.55" y="62" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="404.55" y="62" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <!-- Line 3: stack - dim green -->
+  <text xml:space="preserve" x="12" y="82" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="12" y="82" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="12" y="82" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="12" y="82" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <text xml:space="preserve" x="20.4" y="82" fill="rgba(255,191,0,0.08)" font-family="monospace" font-size="14" filter="url(#glow1)"> > STACK: Python · scikit-learn · XGBoost</text>
+  <text xml:space="preserve" x="20.4" y="82" fill="rgba(220,165,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow3)"> > STACK: Python · scikit-learn · XGBoost</text>
+  <text xml:space="preserve" x="20.4" y="82" fill="rgba(200,150,0,0.85)" font-family="monospace" font-size="14"> > STACK: Python · scikit-learn · XGBoost</text>
+
+  <text xml:space="preserve" x="404.55" y="82" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="404.55" y="82" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="404.55" y="82" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="404.55" y="82" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <!-- Line 4: status - dim green -->
+  <text xml:space="preserve" x="12" y="102" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="12" y="102" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="12" y="102" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="12" y="102" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <text xml:space="preserve" x="20.4" y="102" fill="rgba(255,191,0,0.08)" font-family="monospace" font-size="14" filter="url(#glow1)"> > DATA: Kaggle dataset · feature engineering</text>
+  <text xml:space="preserve" x="20.4" y="102" fill="rgba(220,165,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow3)"> > DATA: Kaggle dataset · feature engineering</text>
+  <text xml:space="preserve" x="20.4" y="102" fill="rgba(200,150,0,0.85)" font-family="monospace" font-size="14"> > DATA: Kaggle dataset · feature engineering</text>
+
+  <text xml:space="preserve" x="404.55" y="102" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="404.55" y="102" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="404.55" y="102" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="404.55" y="102" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <!-- Line 5: cursor - dim green -->
+  <text xml:space="preserve" x="12" y="122" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="12" y="122" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="12" y="122" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="12" y="122" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+
+  <text xml:space="preserve" x="20.4" y="122" fill="rgba(255,191,0,0.08)" font-family="monospace" font-size="14" filter="url(#glow1)"> $</text>
+  <text xml:space="preserve" x="20.4" y="122" fill="rgba(220,165,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow3)"> $</text>
+  <text xml:space="preserve" x="20.4" y="122" fill="rgba(200,150,0,0.85)" font-family="monospace" font-size="14"> $</text>
+
+  <text xml:space="preserve" x="404.55" y="122" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">|</text>
+  <text xml:space="preserve" x="404.55" y="122" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">|</text>
+  <text xml:space="preserve" x="404.55" y="122" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">|</text>
+  <text xml:space="preserve" x="404.55" y="122" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">|</text>
+  <!-- Blinking cursor -->
+  <rect x="46" y="110" width="8" height="15" fill="#FFBF00" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Bottom border - bright glow -->
+  <text xml:space="preserve" x="12" y="142" fill="rgba(255,191,0,0.15)" font-family="monospace" font-size="14" filter="url(#glow1)">└──────────────────────────────────────────────────┘</text>
+  <text xml:space="preserve" x="12" y="142" fill="rgba(255,191,0,0.3)" font-family="monospace" font-size="14" filter="url(#glow2)">└──────────────────────────────────────────────────┘</text>
+  <text xml:space="preserve" x="12" y="142" fill="#FFBF00" font-family="monospace" font-size="14" filter="url(#glow3)">└──────────────────────────────────────────────────┘</text>
+  <text xml:space="preserve" x="12" y="142" fill="rgba(255,255,255,0.9)" font-family="monospace" font-size="14">└──────────────────────────────────────────────────┘</text>
+</svg>
