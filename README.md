@@ -37,4 +37,4 @@
 
 [![VibeBuddy-AI](badges/vibebuddy-card.svg)](https://github.com/MaksymY11/VibeBuddy-AI) [![Malicious_URL_Classifier](badges/malicious_urls.svg)](https://github.com/MaksymY11/Malicious-URLs-ML-Project) 
 
-[![Charge!](badges/charge.svg)](https://github.com/MaksymY11/Charge-PVP-Jousting-Game) [![SpaceRock](badges/spacerock.svg)](https://github.com/MaksymY11 Malicious-URLs-ML-Project)
+[![Charge!](badges/charge.svg)](https://github.com/MaksymY11/Charge-PVP-Jousting-Game) [![SpaceRock](badges/spacerock.svg)](https://github.com/MaksymY11/SpaceRock)
